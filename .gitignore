@@ -1,3 +1,7 @@
 *.dSYM
 *.DS_Store
 *.vscode
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
