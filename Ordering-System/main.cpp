@@ -11,13 +11,21 @@ Contents:
 
 #include "headerFiles/orders.h"
 #include "headerFiles/menu.h"
+#include "headerFiles/fileMangment.h"
 
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    addMenuItem();
+    Menu menu;
+    FileMangment file;
 
-    return 0;
+    menu.addMenuItem();
+    //read from file returns a json object
+    cout << endl << file.readFromFile("menu.json") << endl;
+
+
+    system("pause>0");//system will be removed just here for testing
+    //return 0;
 }
