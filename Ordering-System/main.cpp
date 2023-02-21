@@ -22,9 +22,15 @@ int main() {
     FileMangment file;
 
     menu.addMenuItem();
-    //read from file returns a json object
-    cout << endl << file.readFromFile(file.menuJsonFile, "1") << endl;
 
+    //most of this is only here for testing :)
+
+    //read from file returns a json object
+    if (menu.id == "3") {
+        cout << endl << file.selectObjectById(file.menuJsonFile, "2") << endl;
+    }
+    
+    cout << endl << file.selectObjectById(file.menuJsonFile, "1") << endl;
 
     system("pause>0");//system will be removed just here for testing
     //return 0;

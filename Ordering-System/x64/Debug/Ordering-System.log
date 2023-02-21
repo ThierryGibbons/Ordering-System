@@ -1,2 +1,6 @@
-﻿  menu.cpp
+﻿  fileMangment.cpp
+  main.cpp
+  menu.cpp
+  orders.cpp
+  Generating Code...
   Ordering-System.vcxproj -> H:\school\Ordering-System\x64\Debug\Ordering-System.exe

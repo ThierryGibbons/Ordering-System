@@ -38,7 +38,7 @@ using json = nlohmann::json;
 
 // Define the menu item structure
 typedef struct {
-    long id;
+    string id;
     string name;
     float price;
 } menuItem;
@@ -59,13 +59,15 @@ public:
 private:
 
     FileMangment file;
-
-
+        
     json data;
-
-    long id = 0;
+    
     string name;
     float price;
+    
+public:
+
+    string id;
     
 };
 

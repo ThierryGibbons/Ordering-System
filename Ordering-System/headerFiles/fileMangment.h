@@ -11,6 +11,7 @@ Contents:
 #pragma once
 #include <fstream>
 #include <iostream>
+//just including the json api needed to use json files
 #include "json.h"
 using json = nlohmann::json;
 
@@ -24,16 +25,24 @@ public:
 
 	~FileMangment();
 
+	// writes a json object to a file
 	void writeToFile(const json& j, const std::string& filePath);
 
-	json readFromFile(const std::string& fileParth, const std::string& id);
+	//reads and retuns a whole json file (in a form of an array)
+	json readFromFile(const std::string& fileParth);
+
+	//reads and retuns a json object using an "id" code to pick the object you want
+	json selectObjectById(const std::string& filePath, const std::string& id);
+
+	//retuns a true or false if a file exists or not
+	bool checkFileExists(const std::string& filePath);
 
 private:
 
 	json jsonObject;
 	
 public:
-	
+	//can be used anywhere in the code instead of tring to write the file text each time:) 
 	std::string menuJsonFile = "jsonFiles/menu.json";
 	std::string userJsonFile = "jsonFiles/user.json";
 	std::string orderJsonFile = "jsonFiles/order.json";
