@@ -8,8 +8,11 @@ Orders::~Orders()
 {
 }
 //function to create a new order with a unique order ID
-Order Orders::createOrder(int customerID, vector<menuItem> items)
+void Orders::createOrder(int customerID, vector<menuItem> items)
 {
+    data = file.readFromFile(file.orderJsonFile);
+
+
     Order newOrder;
     newOrder.customerID = customerID;
     newOrder.items = items;
@@ -20,7 +23,20 @@ Order Orders::createOrder(int customerID, vector<menuItem> items)
         newOrder.price += items[i].price;
     }
     nextOrderID++;
-    return newOrder;
+
+    //push order into a json file 
+    data.push_back({
+        {"customerID",newOrder.customerID},
+        {"items", newOrder.items},
+        {"isPaid", newOrder.isPaid},
+        {"orderID",newOrder.orderID},
+        {"price", newOrder.price}
+    });
+
+    //writes to json file order.json
+    file.writeToFile(data, file.orderJsonFile);
+
+    
 	
 }
 

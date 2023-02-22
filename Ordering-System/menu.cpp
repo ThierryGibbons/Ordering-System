@@ -19,8 +19,10 @@ Menu::~Menu()
 
 
 // get console input of new menu item and put into menu.json file
-void Menu::addMenuItem() {  
-        
+void Menu::addMenuItem() { 
+
+
+    menuItem newItem = { id, name, price };
     //promping user for adding menu items
     cout << "Enter the name of the menu item: ";
     cin >> name;
@@ -28,7 +30,7 @@ void Menu::addMenuItem() {
     cin >> price;
     cout << "Enter Uneck id code of the menu item: ";
     cin >> id;
-    menuItem newItem = { id, name, price };
+    
 
     //reading every thing currently on the json file and storing it inside of the data veraible
     data = file.readFromFile(file.menuJsonFile);
@@ -47,11 +49,37 @@ void Menu::addMenuItem() {
     cout << "New menu item added: " << newItem.name << " $" << newItem.price << endl;
 }
 
-void Menu::getMenuItem()
+void Menu::getMenuItem(const std::string& id)
 {
 
+    menuItem item{ id,name,price };
+    //reads menu file and gets json object by "id" and returns a json object
+    data = file.selectObjectById(file.menuJsonFile, id);
+
+    //finds the value at a key and stores it into the verabils
+    name = data.at("name");
+    price = data.at("price");
+
+    //displays menu item
+    cout << name << " is $" << price << endl;
 }
+
 
 void Menu::getMenu()
 {
+    //reads and returns full json file
+    data = file.readFromFile(file.menuJsonFile);
+
+    //loops though each json object
+    for (const auto& obj : data) {
+
+        //checks if theres another object or the end of json file
+        if (obj.find("name") != obj.end() && obj.find("price") != obj.end() && obj.find("id") != obj.end()) {
+
+            //displays id name and price of each menu item 
+            cout << "item id is: " << obj["id"] << obj["name"] << " is $" << obj["price"] << endl;
+        }
+    }
+
+  
 }

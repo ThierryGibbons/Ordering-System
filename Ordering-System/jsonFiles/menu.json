@@ -18,5 +18,10 @@
         "id": "4",
         "name": "lol",
         "price": 8.0
+    },
+    {
+        "id": "5",
+        "name": "pee",
+        "price": 99.0
     }
 ]

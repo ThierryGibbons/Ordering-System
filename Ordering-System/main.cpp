@@ -14,23 +14,28 @@ Contents:
 #include "headerFiles/fileMangment.h"
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
     Menu menu;
+    Orders orders;
     FileMangment file;
 
-    menu.addMenuItem();
+    //menu.addMenuItem();
 
     //most of this is only here for testing :)
 
-    //read from file returns a json object
-    if (menu.id == "3") {
-        cout << endl << file.selectObjectById(file.menuJsonFile, "2") << endl;
-    }
-    
-    cout << endl << file.selectObjectById(file.menuJsonFile, "1") << endl;
+    menu.getMenuItem("2");
+
+    menu.getMenu();
+
+    vector<menuItem> items{  };
+
+
+    orders.createOrder(1,items);
+
 
     system("pause>0");//system will be removed just here for testing
     //return 0;
