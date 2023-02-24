@@ -54,7 +54,7 @@ menuItem Menu::getMenuItem(const std::string& id)
 
     menuItem item{ id,name,price };
     //reads menu file and gets json object by "id" and returns a json object
-    data = file.selectObjectById(file.menuJsonFile, item.id);
+    data = file.selectObjectById(file.menuJsonFile, item.id, "id");
 
     //finds the value at a key and stores it into the verabils
     

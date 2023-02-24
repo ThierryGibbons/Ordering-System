@@ -54,8 +54,34 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
 	
 }
 
-void Orders::getOrder()
+
+void Orders::getOrder(const std::string& orderID)
 {
+
+    Order oldOrder;
+    //read order.json file to get order using the order id 
+    data = file.selectObjectById(file.orderJsonFile, to_string(oldOrder.orderID), "orderID");
+
+    //creating a vector of menu items to store the json array of menu items already saved
+    vector<menuItem> items;
+
+    //loop over each item in the json file and push them onto the menu item vector 
+    for (auto& item : data) {
+        menuItem getMenuItem;
+        getMenuItem.id = item["id"];
+        getMenuItem.name = item["name"];
+        getMenuItem.price = item["price"];
+
+        items.push_back(getMenuItem);
+    }
+
+
+    //find data at pos and store it into oldOrder strut 
+    oldOrder.customerID = data.at("customerID");
+    oldOrder.isPaid = data.at("isPaid");
+    oldOrder.items = items;
+    oldOrder.price = data.at("price");
+
 }
 
 void Orders::getAllOrders()

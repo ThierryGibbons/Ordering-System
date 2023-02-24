@@ -32,7 +32,7 @@ public:
 	json readFromFile(const std::string& fileParth);
 
 	//reads and retuns a json object using an "id" code to pick the object you want
-	json selectObjectById(const std::string& filePath, const std::string& id);
+	json selectObjectById(const std::string& filePath, const std::string& id, const std::string& key);
 
 	//retuns a true or false if a file exists or not
 	bool checkFileExists(const std::string& filePath);

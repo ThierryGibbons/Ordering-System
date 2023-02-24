@@ -23,7 +23,7 @@ void FileMangment::writeToFile(const json& jsonObject, const std::string& filePa
 }
 
 
-json FileMangment::selectObjectById(const std::string& filePath, const std::string& id)
+json FileMangment::selectObjectById(const std::string& filePath, const std::string& id, const std::string& key)
 {
 	// read the JSON file into a JSON object
 	json jsonObject = readFromFile(filePath);
@@ -31,7 +31,7 @@ json FileMangment::selectObjectById(const std::string& filePath, const std::stri
 	// iterate over the objects in the array
 	for (const auto& obj : jsonObject) {
 		// check if the object has the specified id field
-		if (obj.find("id") != obj.end() && obj["id"] == id) {
+		if (obj.find(key) != obj.end() && obj[key] == id) {
 			// return the object if the id matches
 			return obj;
 		}
