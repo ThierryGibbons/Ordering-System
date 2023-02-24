@@ -49,19 +49,22 @@ void Menu::addMenuItem() {
     cout << "New menu item added: " << newItem.name << " $" << newItem.price << endl;
 }
 
-void Menu::getMenuItem(const std::string& id)
+menuItem Menu::getMenuItem(const std::string& id)
 {
 
     menuItem item{ id,name,price };
     //reads menu file and gets json object by "id" and returns a json object
-    data = file.selectObjectById(file.menuJsonFile, id);
+    data = file.selectObjectById(file.menuJsonFile, item.id);
 
     //finds the value at a key and stores it into the verabils
-    name = data.at("name");
-    price = data.at("price");
+    
+    item.name = data.at("name");
+    item.price = data.at("price");
 
     //displays menu item
-    cout << name << " is $" << price << endl;
+    cout << item.name << " is $" << item.price << endl;
+
+    return item;
 }
 
 

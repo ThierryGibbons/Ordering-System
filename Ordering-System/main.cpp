@@ -29,9 +29,13 @@ int main() {
 
     menu.getMenuItem("2");
 
-    menu.getMenu();
+    vector<menuItem> items;
 
-    vector<menuItem> items{  };
+    for (int i = 1; i < 5; i++) {
+        menuItem item = menu.getMenuItem(to_string(i));
+        items.push_back(item);
+    }
+    
 
 
     orders.createOrder(1,items);

@@ -52,7 +52,7 @@ public:
 
     void addMenuItem();//for adding a new menu item to the menu.json file
 
-    void getMenuItem(const std::string& id);//for getting a menu item from the menu.json file
+    menuItem getMenuItem(const std::string& id);//for getting a menu item from the menu.json file
 
     void getMenu();//for getting the entire menu from the menu.json file
 
