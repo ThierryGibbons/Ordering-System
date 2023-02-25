@@ -9,8 +9,11 @@ Contents:
 */
 #pragma once
 #include <fstream>
+#include <iostream>
 #include "json.h"
 using json = nlohmann::json;
+
+
 
 
 class FileMangment
@@ -22,11 +25,17 @@ public:
 
 	void writeToFile(const json& j, const std::string& filePath);
 
-	json readFromFile(const std::string& fileParth);
+	json readFromFile(const std::string& fileParth, const std::string& id);
 
 private:
 
 	json jsonObject;
-		
+	
+public:
+	
+	std::string menuJsonFile = "jsonFiles/menu.json";
+	std::string userJsonFile = "jsonFiles/user.json";
+	std::string orderJsonFile = "jsonFiles/order.json";
+
 };
 

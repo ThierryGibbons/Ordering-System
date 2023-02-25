@@ -23,7 +23,7 @@ int main() {
 
     menu.addMenuItem();
     //read from file returns a json object
-    cout << endl << file.readFromFile("menu.json") << endl;
+    cout << endl << file.readFromFile(file.menuJsonFile, "1") << endl;
 
 
     system("pause>0");//system will be removed just here for testing
