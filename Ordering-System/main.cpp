@@ -27,19 +27,19 @@ int main() {
 
     //most of this is only here for testing :)
 
-    menu.getMenuItem("2");
+    menu.getMenuItem(2);
 
     vector<menuItem> items;
 
-    for (int i = 1; i < 5; i++) {
-        menuItem item = menu.getMenuItem(to_string(i));
+    for (int i = 1; i < 6; i++) {
+        menuItem item = menu.getMenuItem(i);
         items.push_back(item);
     }
     
-
+    menu.getMenu();
 
     orders.createOrder(1,items);
-
+    
 
     system("pause>0");//system will be removed just here for testing
     //return 0;

@@ -5,12 +5,13 @@
 Menu::Menu()
 {
     //i think a part of this causes an error if the file dosent exists the error will only apper for the first item added so its fine
-    // check if the JSON file already exists
+    /* check if the JSON file already exists
     if (!file.checkFileExists(file.menuJsonFile)) {
         // if not, create an empty array and write it to the file 
         json emptyArray = json::array();
         file.writeToFile(emptyArray, file.menuJsonFile);
     }
+    */
 }
 
 Menu::~Menu()
@@ -25,18 +26,21 @@ void Menu::addMenuItem() {
     menuItem newItem = { id, name, price };
     //promping user for adding menu items
     cout << "Enter the name of the menu item: ";
-    cin >> name;
+    cin >> newItem.name;
     cout << "Enter the price of the menu item: ";
-    cin >> price;
-    cout << "Enter Uneck id code of the menu item: ";
-    cin >> id;
+    cin >> newItem.price;
+    
     
 
     //reading every thing currently on the json file and storing it inside of the data veraible
     data = file.readFromFile(file.menuJsonFile);
 
+    //retuns a int for updating id
+    newItem.id = file.checkFileID(file.menuJsonFile, "id");
+           
+
     // add new menu item to json file 
-        
+            
     data.push_back({
         {"id",newItem.id},
         {"name", newItem.name},
@@ -49,7 +53,7 @@ void Menu::addMenuItem() {
     cout << "New menu item added: " << newItem.name << " $" << newItem.price << endl;
 }
 
-menuItem Menu::getMenuItem(const std::string& id)
+menuItem Menu::getMenuItem(int id)
 {
 
     menuItem item{ id,name,price };

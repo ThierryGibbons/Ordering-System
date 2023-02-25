@@ -24,8 +24,11 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
     for (int i = 0; i < items.size(); i++) {
         newOrder.price += items[i].price;
     }
-    //will need to get to json file find last id and add one to that (this will be fixed later)
-    nextOrderID++;
+    
+    //retuns a int for updating id
+    newOrder.orderID = file.checkFileID(file.orderJsonFile, "orderID");
+
+    
 
     //create a json array for items
     json itemsArray = json::array();
@@ -60,7 +63,7 @@ void Orders::getOrder(const std::string& orderID)
 
     Order oldOrder;
     //read order.json file to get order using the order id 
-    data = file.selectObjectById(file.orderJsonFile, to_string(oldOrder.orderID), "orderID");
+    data = file.selectObjectById(file.orderJsonFile, oldOrder.orderID, "orderID");
 
     //creating a vector of menu items to store the json array of menu items already saved
     vector<menuItem> items;

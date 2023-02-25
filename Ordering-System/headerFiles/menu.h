@@ -38,7 +38,7 @@ using json = nlohmann::json;
 
 // Define the menu item structure
 typedef struct {
-    string id;
+    int id;
     string name;
     float price;
 } menuItem;
@@ -52,7 +52,7 @@ public:
 
     void addMenuItem();//for adding a new menu item to the menu.json file
 
-    menuItem getMenuItem(const std::string& id);//for getting a menu item from the menu.json file
+    menuItem getMenuItem(int id);//for getting a menu item from the menu.json file
 
     void getMenu();//for getting the entire menu from the menu.json file
 
@@ -67,7 +67,7 @@ private:
     
 public:
 
-    string id;
+    int id;
     
 };
 

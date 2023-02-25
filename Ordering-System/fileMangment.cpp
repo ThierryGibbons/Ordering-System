@@ -23,10 +23,10 @@ void FileMangment::writeToFile(const json& jsonObject, const std::string& filePa
 }
 
 
-json FileMangment::selectObjectById(const std::string& filePath, const std::string& id, const std::string& key)
+json FileMangment::selectObjectById(const std::string& filePath, int id, const std::string& key)
 {
 	// read the JSON file into a JSON object
-	json jsonObject = readFromFile(filePath);
+	jsonObject = readFromFile(filePath);
 
 	// iterate over the objects in the array
 	for (const auto& obj : jsonObject) {
@@ -38,7 +38,7 @@ json FileMangment::selectObjectById(const std::string& filePath, const std::stri
 	}
 
 	// throw an exception if the id was not found
-	throw std::runtime_error("Error: JSON object with id '" + id + "' not found");
+	throw std::runtime_error("Error: JSON object with id '" + std::to_string(id) + "' not found");
 	
 }
 
@@ -58,6 +58,32 @@ bool FileMangment::checkFileExists(const std::string& filePath)
 		return true;
 	}
 	
+}
+
+//to check id in json file, retuns the id with 1 added to it 
+int FileMangment::checkFileID(const std::string& filePath, const std::string& key)
+{
+
+	int id, maxId{0};
+	//reads file
+	jsonObject = readFromFile(filePath);
+	//if json file is empty return 1 as it's the frist object being created
+	if (jsonObject.empty()) {
+		return 1;
+	}
+	else
+	{
+		//if json file is not empty loop though all items to find last id and store it into maxId
+		for (auto& item : jsonObject)
+		{
+			id = item[key];
+
+			if (id > maxId) maxId = id;
+		}
+	}
+	
+
+	return maxId += 1;
 }
 
 //function to read from a file in a json format

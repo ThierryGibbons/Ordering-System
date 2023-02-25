@@ -4,55 +4,144 @@
         "isPaid": false,
         "items": [
             {
-                "id": "1",
-                "name": "pizza",
-                "price": 6.0
-            },
-            {
-                "id": "2",
+                "id": 1,
                 "name": "coffe",
-                "price": 6.0
+                "price": 5.0
             },
             {
-                "id": "3",
+                "id": 2,
                 "name": "pizza",
-                "price": 6.0
+                "price": 12.0
             },
             {
-                "id": "4",
+                "id": 3,
+                "name": "samy",
+                "price": 4.0
+            },
+            {
+                "id": 4,
                 "name": "ham",
-                "price": 32.0
+                "price": 2.0
             }
         ],
         "orderID": 1,
-        "price": 50.0
+        "price": 23.0
     },
     {
         "customerID": 1,
         "isPaid": false,
         "items": [
             {
-                "id": "1",
+                "id": 1,
                 "name": "coffe",
-                "price": 6.0
+                "price": 5.0
             },
             {
-                "id": "2",
+                "id": 2,
                 "name": "pizza",
-                "price": 6.0
+                "price": 12.0
             },
             {
-                "id": "3",
+                "id": 3,
+                "name": "samy",
+                "price": 4.0
+            },
+            {
+                "id": 4,
                 "name": "ham",
-                "price": 32.0
-            },
-            {
-                "id": "4",
-                "name": "lol",
-                "price": 8.0
+                "price": 2.0
             }
         ],
-        "orderID": 1,
-        "price": 52.0
+        "orderID": 2,
+        "price": 23.0
+    },
+    {
+        "customerID": 1,
+        "isPaid": false,
+        "items": [
+            {
+                "id": 1,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 2,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 3,
+                "name": "samy",
+                "price": 4.0
+            },
+            {
+                "id": 4,
+                "name": "ham",
+                "price": 2.0
+            }
+        ],
+        "orderID": 3,
+        "price": 23.0
+    },
+    {
+        "customerID": 1,
+        "isPaid": false,
+        "items": [
+            {
+                "id": 1,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 2,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 3,
+                "name": "samy",
+                "price": 4.0
+            },
+            {
+                "id": 4,
+                "name": "ham",
+                "price": 2.0
+            }
+        ],
+        "orderID": 4,
+        "price": 23.0
+    },
+    {
+        "customerID": 1,
+        "isPaid": false,
+        "items": [
+            {
+                "id": 1,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 2,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 3,
+                "name": "samy",
+                "price": 4.0
+            },
+            {
+                "id": 4,
+                "name": "ham",
+                "price": 2.0
+            },
+            {
+                "id": 5,
+                "name": "coke",
+                "price": 4.0
+            }
+        ],
+        "orderID": 5,
+        "price": 27.0
     }
 ]
