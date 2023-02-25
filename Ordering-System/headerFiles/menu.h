@@ -42,30 +42,30 @@ typedef struct {
     float price;
 } menuItem;
 
-// get console input of new menu item and put into menu.json file
-void addMenuItem() {
 
-    fileMangment file;
-    
+class Menu
+{
+public:
+    Menu();
+    ~Menu();
+
+    void addMenuItem();//for adding a new menu item to the menu.json file
+
+    void getMenuItem();//for getting a menu item from the menu.json file
+
+    void getMenu();//for getting the entire menu from the menu.json file
+
+private:
+
+    FileMangment file;
+
+
     json data;
 
-    string name;
-    float price;
-    cout << "Enter the name of the menu item: ";
-    cin >> name;
-    cout << "Enter the price of the menu item: ";
-    cin >> price;
-    menuItem newItem = {name, price};
-    // add new menu item to menu.json file
-    
 
-    data["name"] = newItem.name;
-    data["price"] = newItem.price;
+};
 
-    //writes to json file menu.json
-    file.addToFile(data,"menu.json");
 
-    cout << "New menu item added: " << newItem.name << " $" << newItem.price << endl;
-}
+
 
 #endif

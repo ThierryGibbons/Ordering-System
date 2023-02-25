@@ -49,23 +49,30 @@ typedef struct {
     float price;
 } Order;
 
-int nextOrderID = 1; // variable to keep track of the next order ID
 
-//function to create a new order with a unique order ID
-Order createOrder(int customerID, vector<menuItem> items) {
-    Order newOrder;
-    newOrder.customerID = customerID;
-    newOrder.items = items;
-    newOrder.orderID = nextOrderID;
-    newOrder.isPaid = false;
-    newOrder.price = 0;
-    for (int i = 0; i < items.size(); i++) {
-        newOrder.price += items[i].price;
-    }
-    nextOrderID++;
-    return newOrder;
-}
+class Orders
+{
+public:
+    Orders();
+    ~Orders();
 
+    Order createOrder(int customerID, vector<menuItem> items);
+
+    void getOrder(); //for getting an order from the orders.json file to be displayed to the userand for potential editing
+
+    void getAllOrders(); //for getting all orders from the orders.json file to be displayed to the user and for potential editing
+
+    void confirmOrder(); //for confirming an order and adding it to the orders.json file
+
+    void cancelOrder(); //for cancelling an order and removing it from the orders.json file
+
+
+private:
+
+    int nextOrderID = 1; // variable to keep track of the next order ID
+
+
+};
 
 
 #endif

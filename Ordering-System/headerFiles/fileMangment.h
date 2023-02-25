@@ -13,14 +13,14 @@ Contents:
 using json = nlohmann::json;
 
 
-class fileMangment
+class FileMangment
 {
 public:
-	fileMangment();
+	FileMangment();
 
-	~fileMangment();
+	~FileMangment();
 
-	void addToFile(const json& j, const std::string& filePath);
+	void writeToFile(const json& j, const std::string& filePath);
 
 	json readFromFile(const std::string& fileParth);
 

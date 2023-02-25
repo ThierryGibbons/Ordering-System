@@ -1,14 +1,14 @@
-#include "fileMangment.h"
+#include "headerFiles/fileMangment.h"
 
 //function to write to file in a json format
-void fileMangment::addToFile(const json& jsonObject, const std::string& filePath)
+void FileMangment::writeToFile(const json& jsonObject, const std::string& filePath)
 {
 	std::ofstream writeF(filePath);
 	writeF << std::setw(4) << jsonObject << std::endl;
 }
 
 //function to read from a file in a json format
-json fileMangment::readFromFile(const std::string& filePath)
+json FileMangment::readFromFile(const std::string& filePath)
 {
 	std::ifstream readF(filePath);
 	json jsonObject;
@@ -17,7 +17,7 @@ json fileMangment::readFromFile(const std::string& filePath)
 }
 
 //on start checks
-fileMangment::fileMangment()
+FileMangment::FileMangment()
 {
 	std::ifstream fileUser("user.json");
 	std::ifstream fileMenu("menu.json");
@@ -53,6 +53,6 @@ fileMangment::fileMangment()
 
 }
 
-fileMangment::~fileMangment()
+FileMangment::~FileMangment()
 {
 }
