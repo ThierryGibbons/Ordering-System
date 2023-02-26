@@ -1,2 +1,9 @@
 ﻿  main.cpp
+  orders.cpp
+H:\school\Ordering-System\Ordering-System\orders.cpp(131,56): warning C4244: '=': conversion from 'ValueType' to 'float', possible loss of data
+          with
+          [
+              ValueType=double
+          ]
+  Generating Code...
   Ordering-System.vcxproj -> H:\school\Ordering-System\x64\Debug\Ordering-System.exe

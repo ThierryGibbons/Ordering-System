@@ -38,8 +38,14 @@ int main() {
     
     menu.getMenu();
 
-    orders.createOrder(1,items);
+    //orders.createOrder(1,items);
     
+    orders.getOrder(4);
+
+    orders.confirmOrder(10);
+    orders.getOrder(10);
+
+    orders.cancelOrder(50);
 
     system("pause>0");//system will be removed just here for testing
     //return 0;
