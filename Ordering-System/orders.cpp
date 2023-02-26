@@ -58,7 +58,7 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
 }
 
 
-void Orders::getOrder(const int& orderID)
+Order Orders::getOrder(const int& orderID)
 {
 
     Order oldOrder;
@@ -92,11 +92,7 @@ void Orders::getOrder(const int& orderID)
         oldOrder.price = data.at("price");
 
 
-        std::cout << "customer: " << oldOrder.customerID << " items: \n";
-        for (int i = 0; i < items.size(); i++) {
-            std::cout << items[i] << std::endl;
-        }
-        std::cout << " has paid: " << oldOrder.isPaid << "\n total cost: $" << oldOrder.price << endl;
+        
     }
     else
     {
@@ -177,6 +173,9 @@ void Orders::confirmOrder(const int& orderID)
             break;
         }
     }
+    
+
+    bill.createBill(orderID);
     //save changes back to json file
     file.writeToFile(data, file.orderJsonFile);
 

@@ -1,9 +1,58 @@
+<<<<<<< Updated upstream
 ﻿  main.cpp
   orders.cpp
 H:\school\Ordering-System\Ordering-System\orders.cpp(131,56): warning C4244: '=': conversion from 'ValueType' to 'float', possible loss of data
+=======
+﻿  bill.cpp
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,12): error C3646: 'orders': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,11): error C3646: 'orderStrut': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(22,1): error C2011: 'Bill': 'class' type redefinition
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+H:\school\Ordering-System\Ordering-System\bill.cpp(4,7): error C2027: use of undefined type 'Bill'
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+H:\school\Ordering-System\Ordering-System\bill.cpp(5,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\bill.cpp(6,1): warning C4508: '{ctor}': function should return a value; 'void' return type assumed
+H:\school\Ordering-System\Ordering-System\bill.cpp(8,8): error C2027: use of undefined type 'Bill'
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+H:\school\Ordering-System\Ordering-System\bill.cpp(9,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\bill.cpp(10,1): warning C4508: '{dtor}': function should return a value; 'void' return type assumed
+H:\school\Ordering-System\Ordering-System\bill.cpp(12,12): error C2027: use of undefined type 'Bill'
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+H:\school\Ordering-System\Ordering-System\bill.cpp(15,2): error C2065: 'orderStrut': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(15,15): error C2065: 'orders': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(19,34): error C2065: 'orderStrut': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(20,29): error C2065: 'orderStrut': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(20,5): error C2530: 'item': references must be initialized
+H:\school\Ordering-System\Ordering-System\bill.cpp(20,5): error C3531: 'item': a symbol whose type contains 'auto' must have an initializer
+H:\school\Ordering-System\Ordering-System\bill.cpp(20,27): error C2143: syntax error: missing ';' before ':'
+H:\school\Ordering-System\Ordering-System\bill.cpp(20,45): error C2143: syntax error: missing ';' before ')'
+H:\school\Ordering-System\Ordering-System\bill.cpp(23,35): error C2065: 'orderStrut': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(23,78): error C2065: 'orderStrut': undeclared identifier
+H:\school\Ordering-System\Ordering-System\bill.cpp(27,12): error C2027: use of undefined type 'Bill'
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+  main.cpp
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,12): error C3646: 'orders': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,11): error C3646: 'orderStrut': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(22,1): error C2011: 'Bill': 'class' type redefinition
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(21,7): message : see declaration of 'Bill'
+H:\school\Ordering-System\Ordering-System\main.cpp(26,10): error C2079: 'bill' uses undefined class 'Bill'
+  orders.cpp
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,12): error C3646: 'orders': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(38,18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,11): error C3646: 'orderStrut': unknown override specifier
+H:\school\Ordering-System\Ordering-System\headerFiles\bill.h(40,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\school\Ordering-System\Ordering-System\orders.cpp(127,56): warning C4244: '=': conversion from 'ValueType' to 'float', possible loss of data
+>>>>>>> Stashed changes
           with
           [
               ValueType=double
           ]
   Generating Code...
+<<<<<<< Updated upstream
   Ordering-System.vcxproj -> H:\school\Ordering-System\x64\Debug\Ordering-System.exe
+=======
+>>>>>>> Stashed changes

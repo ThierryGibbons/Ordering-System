@@ -12,6 +12,7 @@ Contents:
 #include "headerFiles/orders.h"
 #include "headerFiles/menu.h"
 #include "headerFiles/fileMangment.h"
+#include "headerFiles/bill.h"
 
 #include <iostream>
 #include <vector>
@@ -22,7 +23,7 @@ int main() {
     Menu menu;
     Orders orders;
     FileMangment file;
-
+    Bill bill;
     //menu.addMenuItem();
 
     //most of this is only here for testing :)
@@ -42,10 +43,10 @@ int main() {
     
     orders.getOrder(4);
 
-    orders.confirmOrder(10);
-    orders.getOrder(10);
+    orders.confirmOrder(49);
+    
 
-    orders.cancelOrder(50);
+    //orders.cancelOrder(50);
 
     system("pause>0");//system will be removed just here for testing
     //return 0;
