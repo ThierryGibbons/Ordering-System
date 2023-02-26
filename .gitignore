@@ -5,5 +5,9 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+.x64/
+.vs/
+*.x64/Debug
+*.vs/Ordering-System
 *.vs
 main
