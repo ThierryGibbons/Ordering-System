@@ -53,7 +53,7 @@ void Menu::addMenuItem() {
     cout << "New menu item added: " << newItem.name << " $" << newItem.price << endl;
 }
 
-menuItem Menu::getMenuItem(int id)
+menuItem Menu::getMenuItem(const int& id)
 {
 
     menuItem item{ id,name,price };
@@ -89,4 +89,38 @@ void Menu::getMenu()
     }
 
   
+}
+
+void Menu::modifiyMenu(const int& id)
+{
+    //read json file and store it into data
+    data = file.readFromFile(file.menuJsonFile);
+
+    menuItem menu{id,name,price};
+     
+    //loop over each json object untill you find the one you want
+    for (auto& item : data) {
+        if (item["id"] == id) {
+            //store item 
+            menu.name = item["name"];
+            menu.price = item["price"];
+
+            //display to user and promt them to change name and price
+            std::cout << "\n Change Name of: " << menu.name << " to: ";
+            std::cin >> menu.name;
+
+            std::cout << "\n Change price from: $" << menu.price << " to: $";
+            std::cin >> menu.price;
+
+            //store name and price back into json object
+            item["name"] = menu.name;
+            item["price"] = menu.price;
+
+            break;
+        }
+    }
+    
+    //save changes back to json file 
+    file.writeToFile(data, file.menuJsonFile);
+    
 }

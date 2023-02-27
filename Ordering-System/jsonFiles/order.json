@@ -571,23 +571,34 @@
             }
         ],
         "orderID": 18,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
+<<<<<<< Updated upstream
                 "name": "coffe",
                 "price": 5.0
             },
             {
                 "id": 2,
+=======
+>>>>>>> Stashed changes
                 "name": "pizza",
                 "price": 12.0
             },
             {
+<<<<<<< Updated upstream
                 "id": 3,
                 "name": "samy",
                 "price": 4.0
@@ -608,19 +619,70 @@
     },
     {
         "customerID": 1,
+=======
+                "id": 2,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 4,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 5,
+                "name": "snax",
+                "price": 9.0
+            },
+            {
+                "id": 6,
+                "name": "buger",
+                "price": 15.0
+            },
+            {
+                "id": 7,
+                "name": "slice",
+                "price": 3.0
+            },
+            {
+                "id": 8,
+                "name": "nuggets",
+                "price": 23.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 19,
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
+<<<<<<< Updated upstream
                 "name": "coffe",
                 "price": 5.0
             },
             {
                 "id": 2,
+=======
+>>>>>>> Stashed changes
                 "name": "pizza",
                 "price": 12.0
             },
             {
+<<<<<<< Updated upstream
                 "id": 3,
                 "name": "samy",
                 "price": 4.0
@@ -641,19 +703,70 @@
     },
     {
         "customerID": 1,
+=======
+                "id": 2,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 4,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 5,
+                "name": "snax",
+                "price": 9.0
+            },
+            {
+                "id": 6,
+                "name": "buger",
+                "price": 15.0
+            },
+            {
+                "id": 7,
+                "name": "slice",
+                "price": 3.0
+            },
+            {
+                "id": 8,
+                "name": "nuggets",
+                "price": 23.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 20,
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
+<<<<<<< Updated upstream
                 "name": "coffe",
                 "price": 5.0
             },
             {
                 "id": 2,
+=======
+>>>>>>> Stashed changes
                 "name": "pizza",
                 "price": 12.0
             },
             {
+<<<<<<< Updated upstream
                 "id": 3,
                 "name": "samy",
                 "price": 4.0
@@ -674,19 +787,70 @@
     },
     {
         "customerID": 1,
+=======
+                "id": 2,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 4,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 5,
+                "name": "snax",
+                "price": 9.0
+            },
+            {
+                "id": 6,
+                "name": "buger",
+                "price": 15.0
+            },
+            {
+                "id": 7,
+                "name": "slice",
+                "price": 3.0
+            },
+            {
+                "id": 8,
+                "name": "nuggets",
+                "price": 23.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 21,
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
+<<<<<<< Updated upstream
                 "name": "coffe",
                 "price": 5.0
             },
             {
                 "id": 2,
+=======
+>>>>>>> Stashed changes
                 "name": "pizza",
                 "price": 12.0
             },
             {
+<<<<<<< Updated upstream
                 "id": 3,
                 "name": "samy",
                 "price": 4.0
@@ -707,19 +871,70 @@
     },
     {
         "customerID": 1,
+=======
+                "id": 2,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 4,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 5,
+                "name": "snax",
+                "price": 9.0
+            },
+            {
+                "id": 6,
+                "name": "buger",
+                "price": 15.0
+            },
+            {
+                "id": 7,
+                "name": "slice",
+                "price": 3.0
+            },
+            {
+                "id": 8,
+                "name": "nuggets",
+                "price": 23.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 22,
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
+<<<<<<< Updated upstream
                 "name": "coffe",
                 "price": 5.0
             },
             {
                 "id": 2,
+=======
+>>>>>>> Stashed changes
                 "name": "pizza",
                 "price": 12.0
             },
             {
+<<<<<<< Updated upstream
                 "id": 3,
                 "name": "samy",
                 "price": 4.0
@@ -740,12 +955,63 @@
     },
     {
         "customerID": 1,
+=======
+                "id": 2,
+                "name": "coffe",
+                "price": 5.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 4,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 5,
+                "name": "snax",
+                "price": 9.0
+            },
+            {
+                "id": 6,
+                "name": "buger",
+                "price": 15.0
+            },
+            {
+                "id": 7,
+                "name": "slice",
+                "price": 3.0
+            },
+            {
+                "id": 8,
+                "name": "nuggets",
+                "price": 23.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 23,
+        "price": -107374072.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -754,6 +1020,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -765,20 +1032,34 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 24,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374160.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -787,6 +1068,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -798,20 +1080,34 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 25,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374160.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -820,6 +1116,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -831,20 +1128,34 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 26,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374160.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -853,6 +1164,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -864,20 +1176,34 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 27,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374160.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -886,6 +1212,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -897,20 +1224,34 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 28,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
         "customerID": 1,
+=======
+        "price": -107374160.0
+    },
+    {
+        "customerID": -858993460,
+>>>>>>> Stashed changes
         "isPaid": false,
         "items": [
             {
                 "id": 1,
                 "name": "coffe",
+<<<<<<< Updated upstream
                 "price": 5.0
+=======
+                "price": 6.0
+>>>>>>> Stashed changes
             },
             {
                 "id": 2,
@@ -919,6 +1260,7 @@
             },
             {
                 "id": 3,
+<<<<<<< Updated upstream
                 "name": "samy",
                 "price": 4.0
             },
@@ -930,10 +1272,14 @@
             {
                 "id": 5,
                 "name": "coke",
+=======
+                "name": "pot",
+>>>>>>> Stashed changes
                 "price": 4.0
             }
         ],
         "orderID": 29,
+<<<<<<< Updated upstream
         "price": 27.0
     },
     {
@@ -1727,5 +2073,8 @@
         ],
         "orderID": 54,
         "price": 27.0
+=======
+        "price": -107374160.0
+>>>>>>> Stashed changes
     }
 ]
