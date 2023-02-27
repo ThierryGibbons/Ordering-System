@@ -39,6 +39,9 @@ Contents:
 #include "fileMangment.h"
 #include "menu.h"
 #include "bill.h"
+
+
+
 using namespace std;
 
 
@@ -49,7 +52,7 @@ typedef struct {
     int orderID;
     bool isPaid;
     float price;
-} Order;
+} OrderData;
 
 
 class Orders
@@ -61,7 +64,7 @@ public:
     //theres no need for it to return anytime we will just add it direcly to the json file 
     void createOrder(int customerID, vector<menuItem> items);// for creating a new order with a unique order ID, addingand adjusting items, and paying for the order
 
-    Order getOrder(const int& orderID); //for getting an order from the orders.json file to be displayed to the userand for potential editing
+    OrderData getOrder(const int& orderID); //for getting an order from the orders.json file to be displayed to the userand for potential editing
 
     void getAllOrders(); //for getting all orders from the orders.json file to be displayed to the user and for potential editing
 
@@ -78,7 +81,8 @@ private:
 
     json data;
 
-    Bill bill;
+    Bill billClass;
+
 };
 
 

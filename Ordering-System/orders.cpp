@@ -1,7 +1,11 @@
 #include "headerFiles/orders.h"
 
+
 Orders::Orders()
 {
+
+    
+
 }
 
 Orders::~Orders()
@@ -14,12 +18,10 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
     data = file.readFromFile(file.orderJsonFile);
 
 
-    Order newOrder;
-    newOrder.customerID = customerID;
-    newOrder.items = items;
-    newOrder.orderID = nextOrderID;
+    OrderData newOrder;
+    
     newOrder.isPaid = false;
-    newOrder.price = 0;
+
     //loop though all items to get prices, add them togeter 
     for (int i = 0; i < items.size(); i++) {
         newOrder.price += items[i].price;
@@ -58,10 +60,10 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
 }
 
 
-Order Orders::getOrder(const int& orderID)
+OrderData Orders::getOrder(const int& orderID)
 {
 
-    Order oldOrder;
+    OrderData oldOrder;
     //read order.json file to get order using the order id 
     data = file.selectObjectById(file.orderJsonFile, orderID, "orderID");
     //find items key and move into items key
@@ -92,11 +94,12 @@ Order Orders::getOrder(const int& orderID)
         oldOrder.price = data.at("price");
 
 
-        
+        return oldOrder;
     }
     else
     {
         std::cout << "error json object is empty or missing elements" << endl;
+        
     }
     
 }
@@ -120,7 +123,7 @@ void Orders::getAllOrders()
         }
 
 
-        Order order;
+        OrderData order;
         //find data at pos and store it into order strut 
         order.customerID = orderJson.at("customerID").get<int>();
         order.isPaid = orderJson.at("isPaid").get<bool>();
@@ -162,7 +165,7 @@ void Orders::confirmOrder(const int& orderID)
 
     data = file.readFromFile(file.orderJsonFile);
 
-    Order order;
+    
     //loop over each order if orderID machis change isPaid to true and break
     for (auto& orderJson : data) {
         int currentOrderID = orderJson.at("orderID");
@@ -173,12 +176,12 @@ void Orders::confirmOrder(const int& orderID)
             break;
         }
     }
+       
     
-
-    bill.createBill(orderID);
     //save changes back to json file
     file.writeToFile(data, file.orderJsonFile);
 
+    billClass.createBill(orderID);
 }
 
 void Orders::cancelOrder(const int& orderID)
