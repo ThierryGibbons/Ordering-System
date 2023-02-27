@@ -52,9 +52,11 @@ public:
 
     void addMenuItem();//for adding a new menu item to the menu.json file
 
-    menuItem getMenuItem(int id);//for getting a menu item from the menu.json file
+    menuItem getMenuItem(const int& id);//for getting a menu item from the menu.json file
 
     void getMenu();//for getting the entire menu from the menu.json file
+
+    void modifiyMenu(const int& id);
 
 private:
 
