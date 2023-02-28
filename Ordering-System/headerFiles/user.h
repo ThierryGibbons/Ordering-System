@@ -36,7 +36,7 @@ public:
     ~Users();
 
     // Create a new user
-    void createUser(int username, string password, string name, bool isManager);
+    void createUser();
 
     // Get a user from the users.json file
     User getUser(int username);

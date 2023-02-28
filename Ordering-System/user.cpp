@@ -16,7 +16,7 @@ Users::~Users()
 
 
 // Create a new user
-void Users::createUser(int username, string password, string name, bool isManager)
+void Users::createUser()
 {
     // Read json user file, store info into json data object
     json data = file.readFromFile(file.userJsonFile);
