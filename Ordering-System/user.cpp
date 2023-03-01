@@ -14,7 +14,6 @@ Users::~Users()
 {
 }
 
-
 // Create a new user
 void Users::createUser()
 {
@@ -38,6 +37,9 @@ void Users::createUser()
     } else {
         user.isManager = false;
     }
+
+    // Read json user file, store info into json data object
+    data = file.readFromFile(file.userJsonFile);
 
     // Add the new user to the users vector
     data.push_back({
