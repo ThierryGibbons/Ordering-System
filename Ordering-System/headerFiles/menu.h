@@ -26,7 +26,7 @@ Contents:
 
 /*
 * becuse we will be reading and writing to a json in more then just one file ill make a file manager file
-* 
+*
 #include <fstream>
 #include "nlohmann/json.hpp"
 */
@@ -61,16 +61,16 @@ public:
 private:
 
     FileMangment file;
-        
+
     json data;
-    
+
     string name;
     float price;
-    
+
 public:
 
     int id;
-    
+
 };
 
 

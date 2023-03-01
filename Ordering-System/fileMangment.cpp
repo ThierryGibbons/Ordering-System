@@ -5,7 +5,7 @@
 //function to write to file in a json format
 void FileMangment::writeToFile(const json& jsonObject, const std::string& filePath)
 {
-		
+
 	//opens needed file
 	std::ofstream writeF(filePath);
 
@@ -14,8 +14,8 @@ void FileMangment::writeToFile(const json& jsonObject, const std::string& filePa
 		std::cout << "Error: unable to open file " << filePath << " for writing" << std::endl;
 		return;
 	}
-	
-	
+
+
 	//writes json object to file
 	writeF << std::setw(4) << jsonObject << std::endl;
 	//closes file
@@ -39,7 +39,7 @@ json FileMangment::selectObjectById(const std::string& filePath, int id, const s
 
 	// throw an exception if the id was not found
 	throw std::runtime_error("Error: JSON object with id '" + std::to_string(id) + "' not found");
-	
+
 }
 
 bool FileMangment::checkFileExists(const std::string& filePath)
@@ -57,10 +57,10 @@ bool FileMangment::checkFileExists(const std::string& filePath)
 		checkFile.close();
 		return true;
 	}
-	
+
 }
 
-//to check id in json file, retuns the id with 1 added to it 
+//to check id in json file, retuns the id with 1 added to it
 int FileMangment::checkFileID(const std::string& filePath, const std::string& key)
 {
 
@@ -81,7 +81,7 @@ int FileMangment::checkFileID(const std::string& filePath, const std::string& ke
 			if (id > maxId) maxId = id;
 		}
 	}
-	
+
 
 	return maxId += 1;
 }
@@ -97,7 +97,7 @@ json FileMangment::readFromFile(const std::string& filePath)
 		return json();
 	}
 
-		
+
 	try
 	{
 		//trys to open and read full json obeject and stores it into jsonObject
@@ -124,7 +124,7 @@ json FileMangment::readFromFile(const std::string& filePath)
 
 	// Otherwise, return an empty JSON object
 	return json();
-	
+
 }
 
 //on start checks
@@ -146,7 +146,7 @@ FileMangment::FileMangment()
 
 	if (!fileMenu.good()) {
 		std::ofstream newFile(menuJsonFile);
-		
+
 		newFile.close();
 	}
 	else

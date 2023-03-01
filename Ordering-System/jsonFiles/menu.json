@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "pizza",
+        "price": 12.0
+    },
+    {
+        "id": 2,
+        "name": "coffe",
+        "price": 5.0
+    },
+    {
+        "id": 3,
+        "name": "coke",
+        "price": 7.0
+    },
+    {
+        "id": 4,
+        "name": "pizza",
+        "price": 12.0
+    },
+    {
+        "id": 5,
+        "name": "snax",
+        "price": 9.0
+    },
+    {
+        "id": 6,
+        "name": "buger",
+        "price": 15.0
+    },
+    {
+        "id": 7,
+        "name": "slice",
+        "price": 3.0
+    },
+    {
+        "id": 8,
+        "name": "nuggets",
+        "price": 23.0
+    },
+    {
+        "id": 9,
+        "name": "chips",
+        "price": 6.0
+    }
+]

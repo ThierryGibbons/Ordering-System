@@ -14,7 +14,7 @@ Bill::~Bill()
 void Bill::createBill(const int& id) {
 
 	data = file.selectObjectById(file.orderJsonFile, id, "orderID");
-	 
+
 	int customerID;
 	vector<menuItem> items;
 	bool isPaid;
@@ -23,9 +23,9 @@ void Bill::createBill(const int& id) {
 
 	for (const auto& orderJson : data.at("orderID"))
 	{
-		
 
-		if (currentOrderID == id) 
+
+		if (currentOrderID == id)
 		{
 
 			customerID = data.at("customerID");
@@ -36,13 +36,13 @@ void Bill::createBill(const int& id) {
 				item.id = menuItemJson.at("id");
 				item.name = menuItemJson.at("name");
 				item.price = menuItemJson.at("price");
-				
+
 				items.push_back(item);
 			}
-		    
+
 			isPaid = data.at("isPaid");
 			price = data.at("price");
-			
+
 
 		}
 	}
