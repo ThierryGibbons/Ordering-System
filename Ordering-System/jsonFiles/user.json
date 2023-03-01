@@ -1,0 +1,20 @@
+[
+    {
+        "isManager": true,
+        "name": "jared",
+        "password": "jared",
+        "username": 123
+    },
+    {
+        "isManager": true,
+        "name": "jarrzz",
+        "password": "jared",
+        "username": 123
+    },
+    {
+        "isManager": false,
+        "name": "pla",
+        "password": "pl",
+        "username": 31
+    }
+]

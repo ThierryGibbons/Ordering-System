@@ -36,10 +36,7 @@ public:
     // Create a new user
     void createUser();
 
-    int username;
-    string password;
-    string name;
-    bool isManager;
+
 
 private:
     // FileMangment object

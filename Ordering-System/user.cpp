@@ -17,13 +17,12 @@ Users::~Users()
 // Create a new user
 void Users::createUser()
 {
-    // Read json user file, store info into json data object
-    json data = file.readFromFile(file.userJsonFile);
+    
 
     // Create a new user
     User user;
     // Prompt user for username, password and name
-    cout << "Enter a username: ";
+    cout << "Enter a userID: ";
     cin >> user.username;
     cout << "Enter a password: ";
     cin >> user.password;
