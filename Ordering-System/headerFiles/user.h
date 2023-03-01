@@ -14,8 +14,6 @@ Contents:
 #define USERS_H
 
 #include <iostream>
-#include <vector>
-#include <string>
 
 #include "fileMangment.h"
 
@@ -38,24 +36,17 @@ public:
     // Create a new user
     void createUser();
 
-    // Get a user from the users.json file
-    User getUser(int username);
-
-    // Get all users from the users.json file
-    vector<User> getUsers();
-
-    // Check if a user exists
-    bool userExists(int username);
-
-    // Check if a user's password is correct
-    bool passwordCorrect(int username, string password);
-
-    // Check if a user is a manager
-    bool isManager(int username);
+    int username;
+    string password;
+    string name;
+    bool isManager;
 
 private:
     // FileMangment object
     FileMangment file;
+
+    json data;
+
 };
 
 #endif
