@@ -36,15 +36,15 @@ public:
 	//retuns a true or false if a file exists or not
 	bool checkFileExists(const std::string& filePath);
 
-	////to check id in json file, retuns the id with 1 added to it 
+	////to check id in json file, retuns the id with 1 added to it
 	int checkFileID(const std::string& filePath, const std::string& key);
 
 private:
 
 	json jsonObject;
-	
+
 public:
-	//can be used anywhere in the code instead of tring to write the file text each time:) 
+	//can be used anywhere in the code instead of tring to write the file text each time:)
 	std::string menuJsonFile = "jsonFiles/menu.json";
 	std::string userJsonFile = "jsonFiles/user.json";
 	std::string orderJsonFile = "jsonFiles/order.json";

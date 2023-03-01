@@ -3,15 +3,7 @@
 
 
 Menu::Menu()
-{
-    //i think a part of this causes an error if the file dosent exists the error will only apper for the first item added so its fine
-    /* check if the JSON file already exists
-    if (!file.checkFileExists(file.menuJsonFile)) {
-        // if not, create an empty array and write it to the file 
-        json emptyArray = json::array();
-        file.writeToFile(emptyArray, file.menuJsonFile);
-    }
-    */
+{    
 }
 
 Menu::~Menu()
