@@ -1,0 +1,25 @@
+[
+    {
+        "customerID": 12,
+        "isPaid": false,
+        "items": [
+            {
+                "id": 1,
+                "name": "pizza",
+                "price": 12.0
+            },
+            {
+                "id": 3,
+                "name": "coke",
+                "price": 7.0
+            },
+            {
+                "id": 9,
+                "name": "chips",
+                "price": 6.0
+            }
+        ],
+        "orderID": 1,
+        "price": 25.0
+    }
+]
