@@ -7,22 +7,7 @@
 #include "headerFiles/user.h"
 
 Users::Users()
-{
-    std::cout << "enter userID: ";
-    std::cin >> newUserID;
-    std::cout << "enter your password: ";
-    std::cin >> newUserPassword;
-
-    while (!passwordCorrect(newUserID, newUserPassword))
-    {
-        loggedin = false;
-        std::cout << "enter userID: ";
-        std::cin >> newUserID;
-        std::cout << "enter your password: ";
-        std::cin >> newUserPassword;
-    }
-    loggedin = true;
-    loggedinUserID = newUserID;
+{  
 }
 
 Users::~Users()
@@ -37,8 +22,15 @@ void Users::createUser()
 
    
     // Prompt user for username, password and name
-    cout << "Enter a userID: ";
-    cin >> user.username;
+    do
+    {
+        cout << "Enter a userID: ";
+        cin >> user.username;
+
+    } while (userExists(user.username));
+    
+
+
     cout << "Enter a password: ";
     cin >> user.password;
     cout << "Enter a name: ";
@@ -191,7 +183,7 @@ bool Users::isManager(int username)
 
     if (user.isManager == true)
     {
-        std::cout << "is Manager\n";
+        
         return true;
     }
 
@@ -213,4 +205,23 @@ void Users::logoutAllUsers()
 
     file.writeToFile(data, file.userJsonFile);
 
+}
+
+void Users::login()
+{
+    std::cout << "enter userID: ";
+    std::cin >> newUserID;
+    std::cout << "enter your password: ";
+    std::cin >> newUserPassword;
+
+    while (!passwordCorrect(newUserID, newUserPassword))
+    {
+        loggedin = false;
+        std::cout << "enter userID: ";
+        std::cin >> newUserID;
+        std::cout << "enter your password: ";
+        std::cin >> newUserPassword;
+    }
+    loggedin = true;
+    loggedinUserID = newUserID;
 }

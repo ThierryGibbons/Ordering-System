@@ -43,5 +43,10 @@
         "id": 9,
         "name": "chips",
         "price": 6.0
+    },
+    {
+        "id": 10,
+        "name": "cake",
+        "price": 5.0
     }
 ]

@@ -55,6 +55,9 @@ public:
     //logout all users
     void logoutAllUsers();
 
+    //starts a login prosess
+    void login();
+
 private:
     // FileMangment object
     FileMangment file;
