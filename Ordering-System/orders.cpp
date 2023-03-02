@@ -3,9 +3,6 @@
 
 Orders::Orders()
 {
-
-    
-
 }
 
 Orders::~Orders()
@@ -21,6 +18,8 @@ void Orders::createOrder(int customerID, vector<menuItem> items)
     OrderData newOrder;
     
     newOrder.isPaid = false;
+    newOrder.price = 0;
+    newOrder.customerID = customerID;
 
     //loop though all items to get prices, add them togeter 
     for (int i = 0; i < items.size(); i++) {
