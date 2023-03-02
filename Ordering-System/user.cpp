@@ -12,7 +12,6 @@ Users::Users()
 
 Users::~Users()
 {
-
 }
 
 // Create a new user
@@ -70,7 +69,7 @@ User Users::getUser(int userName)
     }
     catch (const std::exception& e)
     {
-        std::cout << "userName ID dosent exsit or cant load json users file: " << e.what() << endl;
+        std::cout << "User ID dosent exist or can't load json users file: " << e.what() << endl;
     }
 
     //finds the value at a key and stores it into the verabils
@@ -98,7 +97,7 @@ void Users::getUsers()
             && obj.find("username") != obj.end())
         {
             //displays user id name and if they are a manager of each user
-            cout << "user id is: " << obj["username"] <<" users name is : " << obj.at("name") << " are they a manager :" << obj["isManager"] << endl;
+            cout << "User ID: " << obj["username"] <<"\nUser's name: " << obj.at("name") << "\nManager:" << obj["isManager"] << endl;
         }
     }
 }
@@ -111,7 +110,7 @@ bool Users::userExists(int username)
     }
     catch (const std::exception& e)
     {
-        std::cout << "this is an empty userID\n";
+        std::cout << "User ID does not exist.\n";
         return false;
     }
 
@@ -119,7 +118,7 @@ bool Users::userExists(int username)
 
     if (user.username == username) {
         //user exists
-        std::cout << "this user ID already Exists: \n";
+        std::cout << "A user with this User ID already exists: \n";
         return true;
     }
 }
@@ -140,7 +139,7 @@ bool Users::passwordCorrect(int username, string password)
         {
             if (userData["password"] == password) {
 
-                std::cout << "\npassword accepted welcome user: " << user.username << std::endl;
+                std::cout << "\nPassword accepted, Welcome " << user.username << std::endl;
 
                 userData["isLogin"] = true;
 
@@ -149,7 +148,7 @@ bool Users::passwordCorrect(int username, string password)
             }
         }
     }
-    std::cout << "\npassword wrong please check your userID and password are correct.\n";
+    std::cout << "\nIncorrect password, please check your userID and password are correct.\n";
     return false;
 }
 
@@ -162,7 +161,7 @@ bool Users::isManager(int username)
     }
     catch (const std::exception& e)
     {
-        std::cout << "userName ID dosent exsit or cant load json users file: " << e.what() << endl;
+        std::cout << "User ID dosen't exist or cant load json users file: " << e.what() << endl;
     }
 
     user.isManager = data.at("isManager");
@@ -189,7 +188,7 @@ void Users::logoutAllUsers()
 
 void Users::login()
 {
-    std::cout << "enter userID: ";
+    std::cout << "Enter userID: ";
     std::cin >> newUserID;
     std::cout << "enter your password: ";
     std::cin >> newUserPassword;
@@ -197,9 +196,9 @@ void Users::login()
     while (!passwordCorrect(newUserID, newUserPassword))
     {
         loggedin = false;
-        std::cout << "enter userID: ";
+        std::cout << "Enter User ID: ";
         std::cin >> newUserID;
-        std::cout << "enter your password: ";
+        std::cout << "Enter Password: ";
         std::cin >> newUserPassword;
     }
     loggedin = true;
