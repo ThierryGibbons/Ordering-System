@@ -1,5 +1,3 @@
-
-
 #include "headerFiles/fileMangment.h"
 
 //function to write to file in a json format

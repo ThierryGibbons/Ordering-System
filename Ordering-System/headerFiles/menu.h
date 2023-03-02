@@ -1,22 +1,20 @@
 //
 //  CS103-2 :: Menu Header File
 //
-//  Created by Thierry Gibbons.
-//
 
 /*
 Contents:
     - addMenuItem()
     for adding a new menu item to the menu.json file
 
-    - menuItem struct
-    for storing menu item data
-
     - getMenuItem()
     for getting a menu item from the menu.json file
 
     - getMenu()
     for getting the entire menu from the menu.json file
+
+    - modifiyMenu()
+    for modifiying a menu item in the menu.json file
 */
 
 #ifndef MENU_H

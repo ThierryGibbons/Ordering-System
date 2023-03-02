@@ -3,8 +3,6 @@
 
 Bill::Bill()
 {
-
-
 }
 
 Bill::~Bill()
@@ -24,7 +22,6 @@ void Bill::createBill(const int& id) {
 	for (const auto& orderJson : data.at("orderID"))
 	{
 
-
 		if (currentOrderID == id)
 		{
 
@@ -43,15 +40,14 @@ void Bill::createBill(const int& id) {
 			isPaid = data.at("isPaid");
 			price = data.at("price");
 
-
 		}
 	}
 
-	std::cout << "customer: " << customerID << " items: \n";
+	std::cout << "Customer: " << customerID << "\n Items: \n";
 
 	for (const auto& item : items) {
 		std::cout << "\n- " << item.name << ", Price: $" << item.price << std::endl;
 	}
 
-	std::cout << " has Paid: " << isPaid << "\n total cost: $" << price << endl;
+	std::cout << " has Paid: " << isPaid << "\n Total Cost: $" << price << endl;
 }

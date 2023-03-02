@@ -7,7 +7,7 @@
 #include "headerFiles/user.h"
 
 Users::Users()
-{  
+{
 }
 
 Users::~Users()
@@ -18,9 +18,6 @@ Users::~Users()
 // Create a new user
 void Users::createUser()
 {
-    
-
-   
     // Prompt user for username, password and name
     do
     {
@@ -28,8 +25,6 @@ void Users::createUser()
         cin >> user.username;
 
     } while (userExists(user.username));
-    
-
 
     cout << "Enter a password: ";
     cin >> user.password;
@@ -67,9 +62,7 @@ void Users::createUser()
 
 
 User Users::getUser(int userName)
-{   
-
-    
+{
     //reads users file and gets json object by "username" and returns a json object
     try
     {
@@ -79,7 +72,6 @@ User Users::getUser(int userName)
     {
         std::cout << "userName ID dosent exsit or cant load json users file: " << e.what() << endl;
     }
-    
 
     //finds the value at a key and stores it into the verabils
 
@@ -87,8 +79,6 @@ User Users::getUser(int userName)
     user.name = data.at("name");
     user.password = data.at("password");
     user.username = data.at("username");
-
-    
 
     return user;
 }
@@ -102,13 +92,12 @@ void Users::getUsers()
     for (const auto& obj : data) {
 
         //checks if theres another object or the end of json file
-        if (obj.find("name") != obj.end() 
-            && obj.find("isManager") != obj.end() 
+        if (obj.find("name") != obj.end()
+            && obj.find("isManager") != obj.end()
             && obj.find("password") != obj.end()
             && obj.find("username") != obj.end())
         {
-
-            //displays user id name and if they are a manager of each user 
+            //displays user id name and if they are a manager of each user
             cout << "user id is: " << obj["username"] <<" users name is : " << obj.at("name") << " are they a manager :" << obj["isManager"] << endl;
         }
     }
@@ -116,13 +105,12 @@ void Users::getUsers()
 
 bool Users::userExists(int username)
 {
-
     try
     {
         data = file.selectObjectById(file.userJsonFile, username, "username");
     }
     catch (const std::exception& e)
-    {  
+    {
         std::cout << "this is an empty userID\n";
         return false;
     }
@@ -134,14 +122,12 @@ bool Users::userExists(int username)
         std::cout << "this user ID already Exists: \n";
         return true;
     }
-   
-        
 }
 
 bool Users::passwordCorrect(int username, string password)
 {
     //reads users file and gets json object by "username" and returns a json object
-    data = file.readFromFile(file.userJsonFile);    
+    data = file.readFromFile(file.userJsonFile);
 
     for (auto& userData : data) {
 
@@ -156,7 +142,7 @@ bool Users::passwordCorrect(int username, string password)
 
                 std::cout << "\npassword accepted welcome user: " << user.username << std::endl;
 
-                userData["isLogin"] = true;                
+                userData["isLogin"] = true;
 
                 file.writeToFile(data, file.userJsonFile);
                 return true;
@@ -183,10 +169,8 @@ bool Users::isManager(int username)
 
     if (user.isManager == true)
     {
-        
         return true;
     }
-
     return false;
 }
 
@@ -194,17 +178,13 @@ void Users::logoutAllUsers()
 {
     data = file.readFromFile(file.userJsonFile);
 
-
     for (auto& userData : data) {
         if (userData["isLogin"] == true) {
 
             userData["isLogin"] = false;
         }
-
     }
-
     file.writeToFile(data, file.userJsonFile);
-
 }
 
 void Users::login()

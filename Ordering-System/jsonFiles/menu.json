@@ -1,52 +1,47 @@
 [
     {
         "id": 1,
-        "name": "pizza",
-        "price": 12.0
+        "name": "Pie",
+        "price":6.0
     },
     {
         "id": 2,
-        "name": "coffe",
-        "price": 5.0
+        "name": "Burger",
+        "price": 8.0
     },
     {
         "id": 3,
-        "name": "coke",
-        "price": 7.0
+        "name": "Chips",
+        "price": 3.50
     },
     {
         "id": 4,
-        "name": "pizza",
-        "price": 12.0
+        "name": "Loli Bag",
+        "price": 1.0
     },
     {
         "id": 5,
-        "name": "snax",
-        "price": 9.0
+        "name": "Coke",
+        "price": 3.50
     },
     {
         "id": 6,
-        "name": "buger",
-        "price": 15.0
+        "name": "Sprite",
+        "price": 3.50
     },
     {
         "id": 7,
-        "name": "slice",
-        "price": 3.0
+        "name": "L&P",
+        "price": 3.50
     },
     {
         "id": 8,
-        "name": "nuggets",
-        "price": 23.0
+        "name": "Fruju",
+        "price": 2
     },
     {
         "id": 9,
-        "name": "chips",
-        "price": 6.0
-    },
-    {
-        "id": 10,
-        "name": "cake",
-        "price": 5.0
+        "name": "Caramel Slice",
+        "price": 2.50
     }
 ]

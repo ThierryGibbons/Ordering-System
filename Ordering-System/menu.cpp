@@ -1,18 +1,15 @@
 #include "headerFiles/menu.h"
 
-
-
 Menu::Menu()
-{    
+{
 }
 
 Menu::~Menu()
 {
 }
 
-
 // get console input of new menu item and put into menu.json file
-void Menu::addMenuItem() { 
+void Menu::addMenuItem() {
 
 
     menuItem newItem = { id, name, price };
@@ -21,18 +18,15 @@ void Menu::addMenuItem() {
     cin >> newItem.name;
     cout << "Enter the price of the menu item: ";
     cin >> newItem.price;
-    
-    
 
     //reading every thing currently on the json file and storing it inside of the data veraible
     data = file.readFromFile(file.menuJsonFile);
 
     //retuns a int for updating id
     newItem.id = file.checkFileID(file.menuJsonFile, "id");
-           
 
-    // add new menu item to json file 
-            
+    // add new menu item to json file
+
     data.push_back({
         {"id",newItem.id},
         {"name", newItem.name},
@@ -53,7 +47,7 @@ menuItem Menu::getMenuItem(const int& id)
     data = file.selectObjectById(file.menuJsonFile, item.id, "id");
 
     //finds the value at a key and stores it into the verabils
-    
+
     item.name = data.at("name");
     item.price = data.at("price");
 
@@ -75,12 +69,12 @@ void Menu::getMenu()
         //checks if theres another object or the end of json file
         if (obj.find("name") != obj.end() && obj.find("price") != obj.end() && obj.find("id") != obj.end()) {
 
-            //displays id name and price of each menu item 
+            //displays id name and price of each menu item
             cout << "item id is: " << obj["id"] << obj["name"] << " is $" << obj["price"] << endl;
         }
     }
 
-  
+
 }
 
 void Menu::modifiyMenu(const int& id)
@@ -89,11 +83,11 @@ void Menu::modifiyMenu(const int& id)
     data = file.readFromFile(file.menuJsonFile);
 
     menuItem menu{id,name,price};
-     
+
     //loop over each json object untill you find the one you want
     for (auto& item : data) {
         if (item["id"] == id) {
-            //store item 
+            //store item
             menu.name = item["name"];
             menu.price = item["price"];
 
@@ -111,8 +105,8 @@ void Menu::modifiyMenu(const int& id)
             break;
         }
     }
-    
-    //save changes back to json file 
+
+    //save changes back to json file
     file.writeToFile(data, file.menuJsonFile);
-    
+
 }

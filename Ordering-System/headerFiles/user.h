@@ -1,13 +1,32 @@
 //
 //  CS103-2 :: Users Header File
 //
-//  Created by Thierry Gibbons.
-//
 
 /*
 Contents:
     - createUser()
-    for creating a new user with a username, password and name.
+    for creating a new user
+
+    - getUser()
+    for getting a user from the users.json file
+
+    - getUsers()
+    for getting all users from the users.json file
+
+    - userExists()
+    for checking if a user exists
+
+    - passwordCorrect()
+    for checking if a user's password is correct
+
+    - isManager()
+    for checking if a user is a manager
+
+    - logoutAllUsers()
+    for logging out all users
+
+    - login()
+    for starting a login process
 */
 
 #ifndef USERS_H

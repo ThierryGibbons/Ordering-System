@@ -1,25 +1,16 @@
 //
 //  CS103-2 :: Orders Header File
 //
-//  Created by Thierry Gibbons.
-//
 
 /*
 Contents:
     - createOrder()
-    for creating a new order with a unique order ID
-
-    - Order struct
-    for storing order data
-
-    - createOrder()
     for creating a new order with a unique order ID, addingand adjusting items, and paying for the order
 
-
     - getOrder()
-    for getting an order from the orders.json file to be displayed to the user and for potential editing
+    for getting an order from the orders.json file to be displayed to the userand for potential editing
 
-    - getOrders()
+    - getAllOrders()
     for getting all orders from the orders.json file to be displayed to the user and for potential editing
 
     - confirmOrder()

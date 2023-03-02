@@ -1,12 +1,25 @@
 //
 //  CS103-2 :: File Management Header File
 //
-//  Created by Thierry Gibbons & Jared Evans.
-//
 
 /*
 Contents:
+	- writeToFile()
+	to write a json object to a file
+
+	- readFromFile()
+	to read a json file and return it as a json object
+
+	- selectObjectById()
+	to select a json object from a file using an id
+
+	- checkFileExists()
+	to check if a file exists
+
+	- checkFileID()
+	to check the id of the last object in a file
 */
+
 #pragma once
 #include <fstream>
 #include <iostream>

@@ -1,20 +1,11 @@
 //
 //  CS103-2 :: Main C++ File
 //
-//  Created by Thierry Gibbons.
-//
-
-/*
-Contents:
-    e
-*/
 
 #include "headerFiles/fileMangment.h"
 #include "headerFiles/user.h"
 #include "headerFiles/menu.h"
 #include "headerFiles/orders.h"
-
-
 
 #include <iostream>
 #include <vector>
@@ -23,8 +14,6 @@ using namespace std;
 
 //main loop functions
 void addMenuItemsToOrder(Menu menu, Orders orders);
-
-
 
 int main() {
     //call to classes
@@ -42,7 +31,6 @@ int main() {
     int userInput;
     std::string stringUserInput;
     bool setlogout = true;
-
 
     users.login();
 
