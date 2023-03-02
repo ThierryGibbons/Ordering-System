@@ -25,6 +25,7 @@ typedef struct {
     string password;
     string name;
     bool isManager;
+    bool isLogin;
 } User;
 
 class Users
@@ -36,7 +37,23 @@ public:
     // Create a new user
     void createUser();
 
+    // Get a user from the users.json file
+    User getUser(int userName);
 
+    // Get all users from the users.json file
+    void getUsers();
+
+    // Check if a user exists
+    bool userExists(int userName);
+
+    // Check if a user's password is correct
+    bool passwordCorrect(int userName, string password);
+
+    // Check if a user is a manager
+    bool isManager(int userName);
+
+    //logout all users
+    void logoutAllUsers();
 
 private:
     // FileMangment object
@@ -44,6 +61,15 @@ private:
 
     json data;
 
+    User user;
+
+    int newUserID;
+    std::string newUserPassword;
+
+public:
+
+    bool loggedin = false;
+    int loggedinUserID;
 };
 
 #endif
