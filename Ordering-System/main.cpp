@@ -107,12 +107,12 @@ int main() {
 
                     orderData = orders.getOrder(userInput);
 
-                    std::cout << "order ID: " << orderData.orderID;
+                    std::cout << "\norder ID: " << userInput;
                     std::cout << "\ncustomer ID: " << orderData.customerID;
                     std::cout << "\nhas paid: " << orderData.isPaid;
 
                     for (const auto& menuItem : orderData.items) {
-                        std::cout << " - " << menuItem.name << " $" << menuItem.price << std::endl;
+                        std::cout << "\n - " << menuItem.name << " $" << menuItem.price ;
                     }
 
                     std::cout << "\ntotal cost: $" << orderData.price;

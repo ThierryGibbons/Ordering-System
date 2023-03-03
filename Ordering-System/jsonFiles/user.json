@@ -1,0 +1,9 @@
+[
+    {
+        "isLogin": true,
+        "isManager": true,
+        "name": "admin",
+        "password": "admin",
+        "username": 1
+    }
+]

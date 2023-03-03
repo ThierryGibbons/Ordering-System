@@ -59,13 +59,15 @@ OrderData Orders::getOrder(const int& orderID)
 {
 
     OrderData oldOrder;
+    oldOrder.customerID = 0;
+    oldOrder.price = 0;
+    oldOrder.orderID = 0;
     //read order.json file to get order using the order id
     data = file.selectObjectById(file.orderJsonFile, orderID, "orderID");
     //find items key and move into items key
     json items = data.at("items");
 
-    //creating a vector of menu items to store the json array of menu items already saved
-    vector<menuItem> menuItems;
+    
 
     //loop over each item in the json file and push them onto the menu item vector
     for (const auto& menuItemJson : items) {
@@ -74,7 +76,7 @@ OrderData Orders::getOrder(const int& orderID)
         getMenuItem.name = menuItemJson["name"];
         getMenuItem.price = menuItemJson["price"];
 
-        menuItems.push_back(getMenuItem);
+        oldOrder.items.push_back(getMenuItem);
 
     }
 
@@ -82,8 +84,7 @@ OrderData Orders::getOrder(const int& orderID)
     //find data at pos and store it into oldOrder strut
     if (!data.empty()) {
         oldOrder.customerID = data.at("customerID");
-        oldOrder.isPaid = data.at("isPaid");
-        //oldOrder.items = items;
+        oldOrder.isPaid = data.at("isPaid");         
         oldOrder.price = data.at("price");
 
 
